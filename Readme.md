@@ -8,3 +8,5 @@
 npm install
 npm start
 ```
+
+该项目建议使用chrome应用商店提供的`Redux DevTools`。
