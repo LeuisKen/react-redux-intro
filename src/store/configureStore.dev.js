@@ -1,7 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import { persistState } from 'redux-devtools'
 import thunk from 'redux-thunk'
-import DevTools from '../../DevTools'
 import { syncHistory, routeReducer } from 'react-router-redux'
 import { hashHistory } from 'react-router'
 import reducer from '../reducers'
@@ -11,12 +9,7 @@ const reduxRouterMiddleware = syncHistory(hashHistory)
 const finalCreateStore = compose(
   applyMiddleware(thunk),
   applyMiddleware(reduxRouterMiddleware),
-  DevTools.instrument(),
-  persistState(
-    window.location.href.match(
-      /[?&]debug_session=([^&]+)\b/
-    )
-  )
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore)
 
 
