@@ -24,7 +24,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
     alias: {
-      'SRC': __dirname + '/src'
+      'SRC': path.resolve(__dirname, './src')
     }
   },
   module: {

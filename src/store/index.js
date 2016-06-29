@@ -1,12 +1,7 @@
 import configureStoreProd from './configureStore.prod'
 import configureStoreDev from './configureStore.dev'
 
-var configureStore
-
-if (process.env.NODE_ENV === 'production') {
-  configureStore = configureStoreProd
-} else {
-  configureStore = configureStoreDev
-}
+const configureStore =
+  process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev
 
 export default configureStore
