@@ -1,2 +1,0 @@
-export const SET_SEARCH_KEY = 'SET_SEARCH_KEY'
-export const RECEIVE_DATA = 'RECEIVE_DATA'
