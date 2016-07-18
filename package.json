@@ -1,9 +1,12 @@
 {
   "name": "react-redux-intro",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "该项目中包含初始化一个React-Redux项目所需的基本配置，并包含一个基于ant-design的demo。",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev & live-server ./dist",
+    "dev": "webpack --watch --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LeuisKen/react-redux-intro/issues"
   },
@@ -23,6 +26,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
+    "live-server": "^1.0.0",
     "webpack": "^1.13.1"
   },
   "dependencies": {
