@@ -2,7 +2,7 @@
   "name": "react-redux-intro",
   "version": "2.0.0",
   "description": "该项目中包含初始化一个React-Redux项目所需的基本配置，并包含一个基于ant-design的demo。",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "npm run dev & live-server ./dist",
     "dev": "webpack --watch --config webpack.config.dev.js",
