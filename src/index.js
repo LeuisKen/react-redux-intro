@@ -28,11 +28,11 @@ app.model({
   },
   reducers: {
     ['list/fetchData'](state) {
-      return {...state}
+      return { ...state }
     },
     ['list/setData'](state, { list }) {
       state.list = list
-      return {...state}
+      return { ...state }
     }
   },
 });
