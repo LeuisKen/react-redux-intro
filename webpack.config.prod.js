@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var rucksack = require('rucksack-css');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -25,12 +24,11 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('css!postcss!less-loader'),
+        loader: ExtractTextPlugin.extract('css!postcss!less')
       }
     ]
   },
   postcss: [
-    rucksack(),
     autoprefixer({
       browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8'],
     })

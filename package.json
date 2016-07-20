@@ -37,7 +37,6 @@
     "live-server": "^1.0.0",
     "postcss-loader": "^0.9.1",
     "rimraf": "^2.5.3",
-    "rucksack-css": "^0.8.6",
     "webpack": "^1.13.1"
   },
   "dependencies": {
