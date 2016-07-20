@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/LeuisKen/react-redux-intro#readme",
   "devDependencies": {
-    "antd": "^1.6.5",
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -46,6 +45,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "antd": "^1.6.5",
     "dva": "0.0.8",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
