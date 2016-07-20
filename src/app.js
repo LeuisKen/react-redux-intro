@@ -13,7 +13,6 @@ class App extends Component {
     props.dispatch({type: 'list/fetchData'})
   }
   render() {
-    console.log(this.props);
     const dataSource = this.props.list
     return (
       <Table columns={columns} dataSource={dataSource}/>
