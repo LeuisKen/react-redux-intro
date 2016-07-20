@@ -10,19 +10,13 @@ const columns = [{
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      dataSource: []
-    }
-    let self = this
-    fetch(`https://api.github.com/users/facebook/repos`)
-      .then(res => res.json())
-      .then(res => self.setState({
-        dataSource: res
-      }))
+    props.dispatch({type: 'list/fetchData'})
   }
   render() {
+    console.log(this.props);
+    const dataSource = this.props.list
     return (
-      <Table columns={columns} dataSource={this.state.dataSource}/>
+      <Table columns={columns} dataSource={dataSource}/>
     )
   }
 }
