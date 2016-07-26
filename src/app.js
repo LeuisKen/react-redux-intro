@@ -1,23 +1,11 @@
-import React, { Component } from 'react'
-import { Table } from 'antd'
+import dva from 'dva';
+import models from './models'
+import router from './router'
 
-const columns = [{
-  title: '名称',
-  dataIndex: 'name',
-  key: 'name'
-}]
+const app = dva();
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    props.dispatch({type: 'list/fetchData'})
-  }
-  render() {
-    const dataSource = this.props.list
-    return (
-      <Table columns={columns} dataSource={dataSource}/>
-    )
-  }
-}
+app.model(models);
 
-export default App
+app.router(router);
+
+export default app.start();
